@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ByteVariableAndConvertFarToCel {
+public class HomeWorkDay3 {
     /**
      * Fahrenheit to Celsius
      * @author Gor Aleksanyan
@@ -60,6 +60,10 @@ public class ByteVariableAndConvertFarToCel {
     public static void main(String[] args) {
         implicit();
         explicit();
-        fahrenheitToCelsius(76);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Fahrenheit: ");
+        float num = sc.nextFloat();
+
+        fahrenheitToCelsius(num);
     }
 }
