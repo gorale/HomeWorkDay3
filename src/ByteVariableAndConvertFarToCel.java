@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ByteVariable {
+public class ByteVariableAndConvertFarToCel {
     /**
      * Fahrenheit to Celsius
      * @author Gor Aleksanyan
