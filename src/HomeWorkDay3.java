@@ -2,13 +2,15 @@
 import java.util.Scanner;
 
 public class HomeWorkDay3 {
+
     /**
      * Fahrenheit to Celsius
      * @author Gor Aleksanyan
      * */
     public static void fahrenheitToCelsius(float f) {
 
-        float c = (f-32)/1.8f;
+        float a = (f-32)/1.8f;
+        int c = (int) a;
         System.out.println("Temperature: "+c);
 
     }
