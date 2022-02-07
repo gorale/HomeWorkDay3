@@ -2,23 +2,19 @@
 import java.util.Scanner;
 
 public class HomeWorkDay3 {
+
     /**
      * Swap Numbers
      * @author Gor Aleksanyan
      * */
-    public static void swapNumbers(){
-        Scanner num = new Scanner(System.in);
-        System.out.print("Enter number a: ");
-        int a = num.nextInt();
+    public static void swapNumbers(int a,int c){
         System.out.println("a: "+a);
-        System.out.print("Enter number b: ");
-        int b = num.nextInt();
-        System.out.println("b: "+b);
-        b = b+a;
-        a=b-a;
-        b = b-a;
+        System.out.println("b: "+c);
+        c = c+a;
+        a=c-a;
+        c = c-a;
         System.out.println("a after swapping: "+a);
-        System.out.println("b after swapping: "+b);
+        System.out.println("b after swapping: "+c);
     }
     /**
      * Sting problem
@@ -53,10 +49,7 @@ public class HomeWorkDay3 {
      * Int Corresponding Char
      * @author Gor Aleksanyan
      * */
-    public static void intCorrespondingChar(){
-        Scanner num = new Scanner(System.in);
-        System.out.print("Enter int number(range 32 to 127 ): ");
-        int number = num.nextInt();
+    public static void intCorrespondingChar(int number){
         char sim = (char)number;
         System.out.println("char: "+sim);
 
@@ -109,10 +102,9 @@ public class HomeWorkDay3 {
      * Circle area and perimeter
      * @author Gor Aleksanyan
      * */
-    public static void circle(){
+    public static void circle(double r){
         Scanner num = new Scanner(System.in);
-        System.out.print("Enter circle radius: ");
-        double r = num.nextDouble();
+
         double pi = 3.14159;
         double area = pi*r*r;
         double perimeter = 2*pi*r;
@@ -135,10 +127,8 @@ public class HomeWorkDay3 {
      * Narrowing primitive Conversion(Explicit)
      * @author Gor Aleksanyan
      * */
-    public static void explicit() {
-            Scanner num = new Scanner(System.in);
-            System.out.print("Enter double number: ");
-            double number = num.nextDouble();
+    public static void explicit(double number) {
+
             System.out.println("double: "+number);
             float number1 = (float) number;
             System.out.println("float: "+number1);
@@ -158,12 +148,11 @@ public class HomeWorkDay3 {
      * Widening primitive Conversion(Implicit)
      * @author Gor Aleksanyan
      * */
-    public static void implicit() {
-        Scanner num = new Scanner(System.in);
-        System.out.print("Enter byte number: ");
-        byte number = num.nextByte();
-        System.out.println("byte: "+number);
-        short number1 = number;
+    public static void implicit(byte b) {
+
+
+        System.out.println("byte: "+b);
+        short number1 = b;
         System.out.println("short: "+number1);
         int number2 = number1;
         System.out.println("int: "+number2);
@@ -176,16 +165,22 @@ public class HomeWorkDay3 {
 
     }
     public static void main(String[] args) {
-        implicit();
+        Scanner num = new Scanner(System.in);
+        System.out.print("Enter byte number: ");
+        byte b = num.nextByte();
+        implicit(b);
 
-        explicit();
+        System.out.print("Enter double number: ");
+        double number = num.nextDouble();
+        explicit(number);
 
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter Fahrenheit: ");
-        float num = sc.nextFloat();
-        fahrenheitToCelsius(num);
+        float number1 = num.nextFloat();
+        fahrenheitToCelsius(number1);
 
-        circle();
+        System.out.print("Enter circle radius: ");
+        double r = num.nextDouble();
+        circle(r);
 
         expression();
 
@@ -195,7 +190,9 @@ public class HomeWorkDay3 {
 
         averageLetters();
 
-        intCorrespondingChar();
+        System.out.print("Enter int number(range 32 to 127 ): ");
+        int number2 = num.nextInt();
+        intCorrespondingChar(number2);
 
         stringInitialize();
 
@@ -203,6 +200,10 @@ public class HomeWorkDay3 {
 
         stringProblem();
 
-        swapNumbers();
+        System.out.print("Enter number a: ");
+        int a = num.nextInt();
+        System.out.print("Enter number b: ");
+        int c = num.nextInt();
+        swapNumbers(a,c);
     }
 }
