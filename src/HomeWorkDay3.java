@@ -103,8 +103,6 @@ public class HomeWorkDay3 {
      * @author Gor Aleksanyan
      * */
     public static void circle(double r){
-        Scanner num = new Scanner(System.in);
-
         double pi = 3.14159;
         double area = pi*r*r;
         double perimeter = 2*pi*r;
